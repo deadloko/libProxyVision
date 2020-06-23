@@ -14,3 +14,5 @@ include_directories ("${CMAKE_CURRENT_SOURCE_DIR}/sources"
 
 add_library (VisionProxy SHARED ${SOURCES})
 target_link_libraries (VisionProxy opencv_core opencv_imgproc opencv_highgui tesseract)
+
+install (TARGETS VisionProxy CONFIGURATIONS Release DESTINATION /usr/lib/)
